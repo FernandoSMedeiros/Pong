@@ -1,11 +1,9 @@
 function jogar(){
 	var div = $("#bola")			
-	div.animate({top:'295px', left:'395px'}, "slow");
-	
-	console.log((-3) * Math.PI / 4);	
+	div.animate({top:rand(), left:rand()}, "slow");	
 }
 
 function rand(){
-	return Math.random()	
+	return Math.floor(Math.random() * (791 - 10) ) + 10;	
 }
 	
