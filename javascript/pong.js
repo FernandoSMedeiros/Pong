@@ -3,15 +3,16 @@ $(function(){
 	var x = $("#bola").position().left;
 	var y = $("#bola"). position().top;
 
-	var fundo  = $("#fundo");
-
 	var direcaoX = 1;
 	var direcaoY = 1;
 
-	var top = fundo.offset().top;
-	var bottom = fundo.offset().top + fundo.height();
-	var left = fundo.offset().left;
-	var right = fundo.offset().left + fundo.width();
+	var tela  = $("#fundo");
+	var limiteTela = new Object()	
+
+	limiteTela.top = tela.offset().top;
+	limiteTela.bottom = tela.offset().top + tela.height();
+	limiteTela.left = tela.offset().left;
+	limiteTela.right = tela.offset().left + tela.width();
 
 	function jogar(){
 
@@ -20,6 +21,9 @@ $(function(){
         
         $('#bola').css("top", y);
         $('#bola').css("left", x);
+
+        console.log(limiteTela.top)
+        console.log(limiteTela.left)
 
 	}
 
