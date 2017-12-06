@@ -66,8 +66,9 @@ $(function(){
 
 
 	function isColisaoJogador1(){
-		var res = (bola.position().left-(bola.width()/4) == jogador1.position().left) && (bola.position().top >= jogador1.position().top && bola.position().top <= jogador1.position().top + jogador1.height());
-		return res;
+		var res = (bola.position().left+(bola.width()/2)-10 == jogador1.position().left) && (bola.position().top >= jogador1.position().top && bola.position().top <= jogador1.position().top + jogador1.height());
+				
+		return (res);
 	}
 	
 	function isColisaoJogador2(){
