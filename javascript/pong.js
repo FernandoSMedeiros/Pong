@@ -54,7 +54,7 @@ $(function(){
 			direcaoX = -1;
 		}
 		
-		window.addEventListener('keydown',KeyDown,true);
+		window.addEventListener('keydown',botaoApertado,true);
 	}
 	function isColisaoJogador1(){
 		var res = (bola.position().left-(bola.width()/4) == jogador1.position().left) && (bola.position().top >= jogador1.position().top && bola.position().top <= jogador1.position().top + jogador1.height());
@@ -66,7 +66,7 @@ $(function(){
 		return res;
 	}
 	
-	function KeyDown(evt){
+	function botaoApertado(evt){
 		switch (evt.keyCode) {
 			case 87:
 				jogador1.css("top", (jogador1.position().top - 20));
