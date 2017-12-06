@@ -79,20 +79,28 @@ $(function(){
 	function botaoApertado(evt){
 		switch (evt.keyCode) {
 			case 87:
-				jogador1.css("top", (jogador1.position().top - 20));
+				if(jogador1.position().top > 10){
+					jogador1.css("top", (jogador1.position().top - 20));
+				}				
+				console.log(jogador1.position().top)
 				break;
 			case 83: 
-				jogador1.css("top", (jogador1.position().top + 20));
+				if(jogador1.position().top < 450){
+					jogador1.css("top", (jogador1.position().top + 20));
+				}				
 				break;
-			case 38:  
-				jogador2.css("top", (jogador2.position().top - 20));
+			case 38:
+				if(jogador2.position().top > 10){  
+					jogador2.css("top", (jogador2.position().top - 20));
+				}
 				break;
 			case 40: 
-				jogador2.css("top", (jogador2.position().top + 20));
-				break;
-			
+				if(jogador2.position().top < 450)
+					jogador2.css("top", (jogador2.position().top + 20));
+				break;			
 		}
 	}
+	
 	var loop = setInterval(jogar, 1);
 	
 	
