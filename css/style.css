@@ -1,3 +1,12 @@
+.jogador{
+	position:absolute;
+	width:3px;
+	height:150px;
+	top:250px;
+	border: 3px solid #000;
+	background-color: black;
+}
+
 #fundo{		
 	width:800px;
 	height:600px;
