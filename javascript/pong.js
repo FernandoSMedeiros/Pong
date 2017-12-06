@@ -2,7 +2,7 @@ $(function(){
 	
 	var bola = $("#bola");
 	var x = bola.position().left;
-	var y = bola. position().top;
+	var y = bola.position().top;
 
 	var direcaoX = 1;
 	var direcaoY = 1;
@@ -32,6 +32,8 @@ $(function(){
         console.log(limiteTela.top)
         console.log(limiteTela.left)
 		
+		
+		
 		/*if(bola.position().left+(bola.width()/4)>= tela.width()){
 			clearInterval(loop);
 		}else if(bola.offset().left -(bola.width()/4) <= tela.offset().left){
@@ -51,15 +53,36 @@ $(function(){
 		}else if (isColisaoJogador2()) {
 			direcaoX = -1;
 		}
+		
+		window.addEventListener('keydown',KeyDown,true);
 	}
 	function isColisaoJogador1(){
 		var res = (bola.position().left-(bola.width()/4) == jogador1.position().left) && (bola.position().top >= jogador1.position().top && bola.position().top <= jogador1.position().top + jogador1.height());
 		return res;
-	}function isColisaoJogador2(){
-		var res = (bola.position().left+(bola.width()/4) == jogador2.offset().left) && (bola.position().top >= jogador2.position().top && bola.position().top <= jogador2.position().top + jogador2.height());
+	}
+	
+	function isColisaoJogador2(){
+		var res = (bola.position().left+(bola.width()/2) == jogador2.position().left) && (bola.position().top >= jogador2.position().top && bola.position().top <= jogador2.position().top + jogador2.height());
 		return res;
 	}
-		
+	
+	function KeyDown(evt){
+		switch (evt.keyCode) {
+			case 87:
+				jogador1.css("top", (jogador1.position().top - 20));
+				break;
+			case 83: 
+				jogador1.css("top", (jogador1.position().top + 20));
+				break;
+			case 38:  
+				jogador2.css("top", (jogador2.position().top - 20));
+				break;
+			case 40: 
+				jogador2.css("top", (jogador2.position().top + 20));
+				break;
+			
+		}
+	}
 
 	var loop = setInterval(jogar, 1);
 	
