@@ -7,6 +7,8 @@
 	background-color: black;
 }
 
+
+
 #fundo{
 	width:800px;
 	height:600px;
@@ -36,6 +38,7 @@
 	width: 50px;
 	height: 30px;
 	border: 2px solid #000;
+	align-content: center;
 }
 
 #player2{
@@ -44,5 +47,15 @@
 	width: 50px;
 	height: 30px;
 	border: 2px solid #000;
+	align-content: center;
+}
+
+#linha{
+	position: absolute;
+	top:0px;
+	left:400px;
+	width:0px;
+	height:599px;
+	border: 2px dashed #000;
 }
 
