@@ -4,6 +4,8 @@ $(function(){
 	var x = bola.position().left;
 	var y = bola.position().top;
 
+	console.log("riwuhfgruyhiuew".x)
+
 	var direcaoX = 1;
 	var direcaoY = 1;
 
@@ -22,18 +24,15 @@ $(function(){
 	function jogar(){
 		
 		
-
 		x += direcaoX;
 		y += direcaoY;
         
         bola.css("top", y);
 		bola.css("left", x);
 
-        console.log(limiteTela.top)
-        console.log(limiteTela.left)
-		
-		
-		
+		console.log(x)
+
+        		
 		/*if(bola.position().left+(bola.width()/4)>= tela.width()){
 			clearInterval(loop);
 		}else if(bola.offset().left -(bola.width()/4) <= tela.offset().left){
